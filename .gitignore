@@ -41,7 +41,7 @@ SHASUMS256.txt
 compile_commands.json
 .envrc
 *.json
-
+main.js
 
 # npm package
 /npm/dist
