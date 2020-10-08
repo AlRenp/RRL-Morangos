@@ -49,12 +49,22 @@ header nav li a:hover{
     padding: 10px 20px;
     border-radius: 20px;
     background: rgb(236, 78, 78);
-    transition: 0.7s;
+    transition: .3s;
 }
 
 #conteudo {
-    border: 1px solid red;
     clear: both;
+    
+}
+
+#conteudo a {
+    display: block;
+    color: rgb(155, 218, 60);
+    margin: 10px auto;
+}
+
+#opcoes {
+    color: rgb(155, 218, 60);
 }
 
 ul {
@@ -64,4 +74,53 @@ ul {
 a {
     text-decoration: none;
 }
+
+/* ANIMAÇÃO */
+
+.card {
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px 0 white;
+    position: relative;
+    border-radius: 15px;
+}
+
+.card::after,
+.card::before {
+    border-radius: 15px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.card::before {
+    border-left: 2px solid  rgb(236, 78, 78);
+    border-right: 2px solid  rgb(236, 78, 78);
+    transform: scaleY(0);
+}
+
+.card::after {
+    border-top: 2px solid  rgb(236, 78, 78);
+    border-bottom: 2px solid  rgb(236, 78, 78);
+    transform: scaleX(0);
+}
+
+.card:hover:before {
+    transform: scaleY(1);
+    box-shadow: 0 0px 20px 0 rgb(236, 78, 78);
+}
+
+.card:hover:after {
+    transform: scaleX(1);
+}
+
+
+.text {
+    margin: 20px auto;
+}
+
 
